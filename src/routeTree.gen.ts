@@ -10,33 +10,180 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AsistentesTelefonicosRouteImport } from './routes/asistentes-telefonicos'
+import { Route as ChatbotsWebRouteImport } from './routes/chatbots-web'
+import { Route as ComparativaRouteImport } from './routes/comparativa'
+import { Route as FuncionalidadesRouteImport } from './routes/funcionalidades'
+import { Route as PreciosRouteImport } from './routes/precios'
+import { Route as WhatsappRouteImport } from './routes/whatsapp'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
+import { Route as DocsIndexRouteImport } from './routes/docs.index'
+import { Route as DocsSlugRouteImport } from './routes/docs.$slug'
+import { Route as LegalSlugRouteImport } from './routes/legal.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AsistentesTelefonicosRoute = AsistentesTelefonicosRouteImport.update({
+  id: '/asistentes-telefonicos',
+  path: '/asistentes-telefonicos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ChatbotsWebRoute = ChatbotsWebRouteImport.update({
+  id: '/chatbots-web',
+  path: '/chatbots-web',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComparativaRoute = ComparativaRouteImport.update({
+  id: '/comparativa',
+  path: '/comparativa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FuncionalidadesRoute = FuncionalidadesRouteImport.update({
+  id: '/funcionalidades',
+  path: '/funcionalidades',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PreciosRoute = PreciosRouteImport.update({
+  id: '/precios',
+  path: '/precios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhatsappRoute = WhatsappRouteImport.update({
+  id: '/whatsapp',
+  path: '/whatsapp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocsIndexRoute = DocsIndexRouteImport.update({
+  id: '/docs/',
+  path: '/docs/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocsSlugRoute = DocsSlugRouteImport.update({
+  id: '/docs/$slug',
+  path: '/docs/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalSlugRoute = LegalSlugRouteImport.update({
+  id: '/legal/$slug',
+  path: '/legal/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/asistentes-telefonicos': typeof AsistentesTelefonicosRoute
+  '/chatbots-web': typeof ChatbotsWebRoute
+  '/comparativa': typeof ComparativaRoute
+  '/funcionalidades': typeof FuncionalidadesRoute
+  '/precios': typeof PreciosRoute
+  '/whatsapp': typeof WhatsappRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/docs/$slug': typeof DocsSlugRoute
+  '/legal/$slug': typeof LegalSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/docs/': typeof DocsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/asistentes-telefonicos': typeof AsistentesTelefonicosRoute
+  '/chatbots-web': typeof ChatbotsWebRoute
+  '/comparativa': typeof ComparativaRoute
+  '/funcionalidades': typeof FuncionalidadesRoute
+  '/precios': typeof PreciosRoute
+  '/whatsapp': typeof WhatsappRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/docs/$slug': typeof DocsSlugRoute
+  '/legal/$slug': typeof LegalSlugRoute
+  '/blog': typeof BlogIndexRoute
+  '/docs': typeof DocsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/asistentes-telefonicos': typeof AsistentesTelefonicosRoute
+  '/chatbots-web': typeof ChatbotsWebRoute
+  '/comparativa': typeof ComparativaRoute
+  '/funcionalidades': typeof FuncionalidadesRoute
+  '/precios': typeof PreciosRoute
+  '/whatsapp': typeof WhatsappRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/docs/$slug': typeof DocsSlugRoute
+  '/legal/$slug': typeof LegalSlugRoute
+  '/blog/': typeof BlogIndexRoute
+  '/docs/': typeof DocsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/asistentes-telefonicos'
+    | '/chatbots-web'
+    | '/comparativa'
+    | '/funcionalidades'
+    | '/precios'
+    | '/whatsapp'
+    | '/blog/$slug'
+    | '/docs/$slug'
+    | '/legal/$slug'
+    | '/blog/'
+    | '/docs/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/asistentes-telefonicos'
+    | '/chatbots-web'
+    | '/comparativa'
+    | '/funcionalidades'
+    | '/precios'
+    | '/whatsapp'
+    | '/blog/$slug'
+    | '/docs/$slug'
+    | '/legal/$slug'
+    | '/blog'
+    | '/docs'
+  id:
+    | '__root__'
+    | '/'
+    | '/asistentes-telefonicos'
+    | '/chatbots-web'
+    | '/comparativa'
+    | '/funcionalidades'
+    | '/precios'
+    | '/whatsapp'
+    | '/blog/$slug'
+    | '/docs/$slug'
+    | '/legal/$slug'
+    | '/blog/'
+    | '/docs/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AsistentesTelefonicosRoute: typeof AsistentesTelefonicosRoute
+  ChatbotsWebRoute: typeof ChatbotsWebRoute
+  ComparativaRoute: typeof ComparativaRoute
+  FuncionalidadesRoute: typeof FuncionalidadesRoute
+  PreciosRoute: typeof PreciosRoute
+  WhatsappRoute: typeof WhatsappRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  DocsSlugRoute: typeof DocsSlugRoute
+  LegalSlugRoute: typeof LegalSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+  DocsIndexRoute: typeof DocsIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +195,99 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/asistentes-telefonicos': {
+      id: '/asistentes-telefonicos'
+      path: '/asistentes-telefonicos'
+      fullPath: '/asistentes-telefonicos'
+      preLoaderRoute: typeof AsistentesTelefonicosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/chatbots-web': {
+      id: '/chatbots-web'
+      path: '/chatbots-web'
+      fullPath: '/chatbots-web'
+      preLoaderRoute: typeof ChatbotsWebRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/comparativa': {
+      id: '/comparativa'
+      path: '/comparativa'
+      fullPath: '/comparativa'
+      preLoaderRoute: typeof ComparativaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/funcionalidades': {
+      id: '/funcionalidades'
+      path: '/funcionalidades'
+      fullPath: '/funcionalidades'
+      preLoaderRoute: typeof FuncionalidadesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/precios': {
+      id: '/precios'
+      path: '/precios'
+      fullPath: '/precios'
+      preLoaderRoute: typeof PreciosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/whatsapp': {
+      id: '/whatsapp'
+      path: '/whatsapp'
+      fullPath: '/whatsapp'
+      preLoaderRoute: typeof WhatsappRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/docs/': {
+      id: '/docs/'
+      path: '/docs'
+      fullPath: '/docs/'
+      preLoaderRoute: typeof DocsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/docs/$slug': {
+      id: '/docs/$slug'
+      path: '/docs/$slug'
+      fullPath: '/docs/$slug'
+      preLoaderRoute: typeof DocsSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal/$slug': {
+      id: '/legal/$slug'
+      path: '/legal/$slug'
+      fullPath: '/legal/$slug'
+      preLoaderRoute: typeof LegalSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AsistentesTelefonicosRoute: AsistentesTelefonicosRoute,
+  ChatbotsWebRoute: ChatbotsWebRoute,
+  ComparativaRoute: ComparativaRoute,
+  FuncionalidadesRoute: FuncionalidadesRoute,
+  PreciosRoute: PreciosRoute,
+  WhatsappRoute: WhatsappRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  DocsSlugRoute: DocsSlugRoute,
+  LegalSlugRoute: LegalSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
+  DocsIndexRoute: DocsIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
